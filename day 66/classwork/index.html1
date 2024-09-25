@@ -1,0 +1,6 @@
+<div id="slider">
+    <button id="prev">Previous</button>
+    <img id="car1.web" src="car1.webp" alt="car2.webp">
+    <button id="next">Next</button>
+  </div>
+  

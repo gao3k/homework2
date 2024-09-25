@@ -1,0 +1,33 @@
+// სურათების მისამართების მასივი
+const images = [
+    'car1.webp',
+    'car2.webp',
+    'car3.webp'
+  ];
+  
+  // მიმდინარე სურათის ინდექსი
+  let index = 0;
+  
+  // სურათის ელემენტი
+  const imageElement = document.getElementById('car3.webp');
+  
+  // სურათის განახლების ფუნქცია
+  function updateImage() {
+    imageElement.src = images[index];
+  }
+  
+  // "Previous" ღილაკზე დაკლიკების ფუნქცია
+  document.getElementById('prev').addEventListener('click', () => {
+    index = (index === 0) ? images.length - 1 : index - 1;
+    updateImage();
+  });
+  
+  // "Next" ღილაკზე დაკლიკების ფუნქცია
+  document.getElementById('next').addEventListener('click', () => {
+    index = (index === images.length - 1) ? 0 : index + 1;
+    updateImage();
+  });
+  
+  // საწყისი სურათის ჩვენება
+  updateImage();
+  
